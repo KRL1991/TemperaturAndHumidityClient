@@ -6,7 +6,6 @@ import java.util.Scanner;
 
 public class Client {
 
-
     public static void main(String[] args) throws IOException {
 
         String host = "10.200.130.31";
@@ -21,45 +20,26 @@ public class Client {
 
             DataOutputStream dataOutputStream = new DataOutputStream(socket.getOutputStream());
 
-
-
-
             new Thread(() -> {
 
                 while (true) {
+                    
                     DataInputStream inputStream;
-
 
                     try {
                         inputStream = new DataInputStream(socket.getInputStream());
 
-                        // if (inputStream.readUTF().contains("C")) {
-
-                        // temp =  inputStream.readUTF();
+                        System.out.println(inputStream.readUTF());
 
                         System.out.println(inputStream.readUTF());
-                        // }
-
-                        // if (inputStream.readUTF().contains("%")) {
-                        System.out.println(inputStream.readUTF());
-                        // }
-
-
 
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
-
-
                 }
+                
             }).start();
 
-
-        } catch (Exception exception) {
-        }
-
-
+        } catch (Exception exception) {}
     }
-
-
 }
