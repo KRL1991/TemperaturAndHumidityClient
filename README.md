@@ -24,7 +24,8 @@ We can send the data from the raspberry pi via a python program and that data ca
 We planned on implementing a graph to display the data through JavaFX however due to receiving data in atomic format, this proved to be really complicated.  
 We managed to make the graph respond to the data.
 the input from the server expanded the axis' over time and according to the temperature/humidity readings, however we were unable to plot points on the graph.  
-If we had more time we would have figured out a way to receive non-atomic data so it would be easier to display in a graph and then implemented the graph display.
+If we had more time we would have figured out a way to receive non-atomic data so it would be easier to display in a graph and then implemented the graph display.  
+We succeded in encrypting data in our Server, we were able to send the data to our JavaClient however due to our data sending method encoding our data weirdly, our client is unable to parse and display it. See image encryption/decryption.
 
 
 #### Code:
@@ -32,3 +33,7 @@ If we had more time we would have figured out a way to receive non-atomic data s
 Python Server:             |  Java Client:
 :-------------------------:|:-------------------------:
 ![](https://user-images.githubusercontent.com/70659124/135987885-2cc45715-c389-4790-a47b-bc4cdc10e559.png)  |  ![](https://user-images.githubusercontent.com/70659124/135988744-93788d57-7be6-482c-8082-79682b22890b.png)
+
+#### Encryption/decryption:
+![image](https://user-images.githubusercontent.com/70881764/136217754-3689fa5c-d4cf-4cf0-95eb-483f09231f0c.png)
+
